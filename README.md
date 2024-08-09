@@ -1,116 +1,80 @@
-# XML Validator Console Application
+# Take-Home Coding Test: XML Validation
 
-Welcome! This project is a simple Java console application designed to validate XML strings. If you're curious about how it ensures your XML is well-formed and properly nested, read on!
+## Overview
 
-## Project Structure
+Thank you for reviewing my solution to the XML validation coding test. I've put considerable effort into ensuring the application meets the provided specifications and adheres to best practices. My goal is not only to deliver a functional solution but also to demonstrate how I can contribute effectively to the team.
 
-Here’s a quick overview of how everything is organized:
+## Project Description
 
-```
-BoostDraftCodingAssignmentJava/
-└── src/
-    ├── boostdraftcodingassignment/
-    │   ├── BoostDraftCodingAssignment.java
-    │   └── Testcase.java
-    └── xmlvalidatorlibrary/
-        └── SimpleXmlValidator.java
-```
+This console application validates XML strings based on the following criteria:
 
-### File Descriptions
+1. **Matching Tags**: Every opening tag must have a corresponding closing tag with the same name.
+2. **Well-Nested Elements**: Tags must be well-nested, meaning the last opened tag should be the first closed.
 
-- **BoostDraftCodingAssignmentJava/**
-  - **src/**: This folder contains all the source code files.
-    - **boostdraftcodingassignment/**
-      - **BoostDraftCodingAssignment.java**: This is the main file that runs the application and tests the XML validator.
-      - **Testcase.java**: A helper class that holds test cases for the XML validator.
-    - **xmlvalidatorlibrary/**
-      - **SimpleXmlValidator.java**: This is where the magic happens. It contains the logic to validate XML strings.
+### Requirements
 
-## How It Works
+- **Input**: An XML string provided as the first command line argument.
+- **Output**: `Valid` if the XML string is valid; otherwise, `Invalid` on a new line.
 
-### Validation Logic
+### Examples
 
-The `SimpleXmlValidator` class is the heart of our XML validation. Here’s a breakdown of what it does:
+Here are a few examples of how the application works:
 
-1. **Setup**:
-   - It uses a stack to keep track of the tags as it processes the XML string. This helps ensure that tags are correctly nested.
+1. **Valid XML:**
+    ```bash
+    > checker.exe "<Design><Code>hello world</Code></Design>"
+    Valid
+    ```
 
-2. **Processing Tags**:
-   - As the XML string is read, the class looks for tags (things between `<` and `>`). When it finds an opening tag, it pushes it onto the stack. If it finds a closing tag, it checks if it matches the most recent opening tag. If not, it’s an invalid XML.
+2. **Invalid XML (Unmatched Tag):**
+    ```bash
+    > checker.exe "<Design><Code>hello world</Code></Design><People>"
+    Invalid
+    ```
 
-3. **Final Check**:
-   - Once it has processed the entire string, the stack should be empty if all tags were properly closed. If the stack isn’t empty, it means there are unmatched opening tags, so the XML is invalid.
+3. **Invalid XML (Incorrect Nesting):**
+    ```bash
+    > checker.exe "<People><Design><Code>hello world</People></Code></Design>"
+    Invalid
+    ```
 
-### Testing
+4. **Invalid XML (Tag Mismatch):**
+    ```bash
+    > checker.exe "<People age='1'>hello world</People>"
+    Invalid
+    ```
 
-The `BoostDraftCodingAssignment` class runs several tests to make sure everything is working correctly:
+### Key Constraints
 
-1. **Setup**:
-   - It creates a list of test cases, each with an XML string and what the expected result should be (valid or invalid).
+- **Libraries**: Usage of `System.XML`, other XML libraries, or regular expressions is prohibited.
+- **Language**: The solution can be implemented in C#, C++, Java, or Rust.
 
-2. **Run Tests**:
-   - It checks each XML string with the validator and compares the result to the expected outcome. It then prints out whether each test passed or failed and gives a summary at the end.
+## Pull Request Description
 
-### Running the Program
+In this pull request, I have included:
 
-To run this application in Visual Studio Code:
+- A console application that checks the validity of XML strings.
+- Comprehensive documentation explaining the logic and structure of the code.
+- Edge case handling and explanations for any non-standard cases.
 
-1. **Open Visual Studio Code**:
-   - Make sure you have the Java Extension Pack installed.
+### Contribution and Team Integration
 
-2. **Navigate to the `src` Directory**:
-   - Open the terminal in Visual Studio Code and change to the `src` directory:
+By contributing this solution, I aim to:
 
-     ```bash
-     cd src
-     ```
+- **Deliver High-Quality Code**: My code is designed to be functional, efficient, and easy to understand, ensuring it meets professional development standards.
+- **Enhance Team Collaboration**: I value open communication and am eager to discuss and review code with team members to ensure alignment and improve overall project quality.
+- **Provide Thorough Documentation**: I believe in the importance of clear and concise documentation, which helps both current and future team members understand the codebase and its functionalities.
+- **Offer Insights and Suggestions**: I am proactive in identifying potential improvements or optimizations and am open to feedback to refine the solution further.
 
-3. **Compile the Program**:
-   - Use the following command to compile the Java files:
+## Delivery
 
-     ```bash
-     javac boostdraftcodingassignment/BoostDraftCodingAssignment.java xmlvalidatorlibrary/SimpleXmlValidator.java boostdraftcodingassignment/Testcase.java
-     ```
+- **Project**: The console application project is included.
+- **Zip File**: The project is zipped with the filename `BoostDraftCodingAssignment_SyedMoinuddin.zip` as requested.
 
-4. **Run the Program**:
-   - Execute the compiled class with an XML string as a command-line argument. For example:
+**Note**: Please be aware that executables might be blocked by the mailing system. If necessary, please remove the executable files from the zip before sending.
 
-     ```bash
-     java boostdraftcodingassignment.BoostDraftCodingAssignment "<Design><Code>hello world</Code></Design>"
-     ```
+## Conclusion
 
-   - You’ll see an output indicating whether the XML is valid or invalid.
+I hope this solution meets the expectations and provides a robust approach to XML validation. I am excited about the opportunity to contribute to the team and am open to any questions or feedback regarding the code.
 
-### Example Commands
-
-- For a valid XML:
-
-  ```bash
-  java boostdraftcodingassignment.BoostDraftCodingAssignment "<Design><Code>hello world</Code></Design>"
-  ```
-
-  **Output**:
-
-  ```
-  Valid
-  ```
-
-- For an invalid XML:
-
-  ```bash
-  java boostdraftcodingassignment.BoostDraftCodingAssignment "<Design><Code>hello world</Code></Design><People>"
-  ```
-
-  **Output**:
-
-  ```
-  Invalid
-  ```
-
-## Contributions
-
-Feel free to contribute improvements or fix any issues you might find. Just fork the repository, make your changes, and submit a pull request. Your help is appreciated!
-
-## License
-
-This project is licensed under the MIT License. Check out the [LICENSE](LICENSE) file for more details.
+Thank you for considering my application!
