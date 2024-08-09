@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "eFr+A0emfHGZ3dWktuzAPQskFPmDR8QsYeKI6YlrtVOzufYrpa4NvjgQITVW+Gf16YVZt3WqqCz5ECTzaaY9Eg==",
+  "success": true,
+  "projectFilePath": "E:\\BoostDraftCodingAssignmentCSharp\\BoostDraftCodingAssignmentCSharp\\Main\\Main.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\syedm\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\syedm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\syedm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\syedm\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
