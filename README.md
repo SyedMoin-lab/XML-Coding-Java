@@ -1,5 +1,6 @@
 # XML Validator Console Application - Explanation
 
+
 ## Project Overview
 
 This Java console application validates XML strings to ensure they are well-formed. It checks if every starting element has a corresponding ending element and ensures that elements are properly nested.
